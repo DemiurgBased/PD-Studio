@@ -1,0 +1,29 @@
+.section {
+    &-odd {
+        height: 680px;
+        background: var(--white);
+    }
+    &-even {
+        height: 680px;
+        background: var(--light);
+    }
+}
+
+.container {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.regular {
+    font-size: 16px;
+    font-weight: 400px;
+    font-family: 'Nunito', sans-serif;
+}
+.heading {
+    font-size: 48px;
+    font-weight: 700px;
+    font-family: 'Comfortaa', sans-serif;
+}
+.shadow {
+    box-shadow: 1px 4px 4px 0 rgba(0, 0, 0, 0.25), -1px 0 4px 0 rgba(0, 0, 0, 0.25);
+}
