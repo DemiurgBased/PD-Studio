@@ -1,41 +1,61 @@
 html * {
         transition: 0.3s;
-        // background-color var(--transition-time) ease,
-        // color var(--transition-time) ease,
-        // border-color var(--transition-time) ease;
         color: var(--dark);
-        font-size: 16px;
-}
-.section {
-    &-odd {
-        height: 680px;
-        background: var(--white);
-    }
-    &-even {
-        height: 680px;
-        background: var(--light);
-    }
 }
 
-.container {
-    width: 1200px;
-    margin: 0 auto;
-}
-
-.regular {
-    font-size: 1rem;
-    font-family: 'Nunito', sans-serif;
-}
-.heading {
-    font-size: 3rem;
-    font-family: 'Comfortaa', sans-serif;
-}
-.shadow {
-    box-shadow: 1px 4px 4px 0 rgba(0, 0, 0, 0.25), -1px 0 4px 0 rgba(0, 0, 0, 0.25);
+html {
+    font-size: 10px;
 }
 
 a {
     all: unset; /* сбросить все стили */
     cursor: pointer; /* вернуть курсор-указатель */
     color: inherit; /* наследовать цвет текста */
+}
+
+.section {
+    &-odd {
+        height: 68rem;
+        background: var(--white);
+    }
+    &-even {
+        height: 68rem;
+        background: var(--light);
+    }
+}
+
+.container {
+    width: 120rem;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+    @include mini-desktop {
+        width: 100rem;
+    }
+    @include tablet {
+        width: 80rem;
+    }
+    @include small-tablet {
+        width: 60rem;
+    }
+    @include mobile {
+        width: 40rem;
+    }
+}
+
+.regular {
+    font-size: 1.6rem;
+    font-family: 'Nunito', sans-serif;
+    @include mini-desktop {
+        font-size: 1.2rem;
+    }
+}
+.heading {
+    font-size: 4.8rem;
+    font-family: 'Comfortaa', sans-serif;
+    @include mini-desktop {
+        font-size: 3.6rem;
+    }
+}
+.shadow {
+    box-shadow: 1px 4px 4px 0 rgba(0, 0, 0, 0.25), -1px 0 4px 0 rgba(0, 0, 0, 0.25);
 }

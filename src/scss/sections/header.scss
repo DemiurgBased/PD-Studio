@@ -1,39 +1,43 @@
 .header {
     background: var(--white);
     font-family: 'Comfortaa';
-    font-size: 1rem;
+    font-size: 1.6rem;
+    height: 6.6rem;
+    position: relative;
+    @include mini-desktop {
+        font-size: 1.2rem;
+    }
+    &__wrapper {
+        display: flex;
+        align-items: center;
+    }
     &__inner {
         display: flex;
         align-items: center;
-        justify-content: space-between;
-        &--left {
-            display: flex;
-            align-items: center;
-            gap: 50px;
+        z-index: 10;
+        transition: 0.5s;
+        width: 100%;
+        &-active {
+            transform: translateY(0) !important;
+            opacity: 1 !important;
         }
-        &--right {
-            display: flex;
-            align-items: center;
-            gap: 20px;
+        @include tablet {
+            opacity: 0;
+            transform: translateY(-100%);
+            width: 100vw;
+            height: 100vh;
+            position: absolute;
+            top: 0;
+            left: 0;
+            flex-direction: column;
+            background-color: var(--light);
+            color: var(--dark);
+            justify-content: center;
+            gap: 30px;
+            font-size: 1.6rem;
         }
     }
 }
-
-.nav {
-    &__list {
-        display: flex;
-        align-items: center;
-        gap: 50px;
-    }
-}
-.socials {
-    &__wrapper {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    }
-}
-
 .theme {
     &__wrapper {
         display: flex;
@@ -52,6 +56,10 @@
         display: flex;
         align-items: center;
         border: 1px solid var(--dark);
+        @include mini-desktop {
+            width: 44px;
+            height: 24px;
+        }
     }
     &__switcher-toggle {
         height: 22px;
@@ -60,12 +68,59 @@
         background: var(--dark);
         margin-left: 4px;
         transition: 0.3s;
+        @include mini-desktop {
+            width: 16px;
+            height: 16px;
+        }
     }
     &__switcher-toggle--active {
         margin-left: 32px;
+        @include mini-desktop {
+            margin-left: 22px;
+        }
     }
 }
 
 .logo svg path {
     fill: var(--blue-logo);
+}
+
+.logo svg {
+    @include mini-desktop {
+        width: 140px;
+    }
+}
+
+.logo {
+    margin-right: 5rem;
+    @include tablet {
+        margin-right: 0;
+    }
+}
+
+.logo-index {
+    z-index: 100;
+}
+
+.socials {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    margin-left: 2rem;
+    @include tablet {
+        margin-left: 0;
+    }
+}
+
+
+.nav {
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+    margin-right: 20rem;
+    @include tablet {
+        flex-direction: column;
+        gap: 30px;
+        margin-right: 0;
+    }
 }
