@@ -2,9 +2,9 @@
     background: var(--white);
     font-family: 'Comfortaa';
     font-size: 1.6rem;
-    height: 6.6rem;
+    height: 10vh;
     position: relative;
-    @include mini-desktop {
+    @include w1200 {
         font-size: 1.2rem;
     }
     &__wrapper {
@@ -21,7 +21,7 @@
             transform: translateY(0) !important;
             opacity: 1 !important;
         }
-        @include tablet {
+        @include w992 {
             opacity: 0;
             transform: translateY(-100%);
             width: 100vw;
@@ -39,6 +39,7 @@
     }
 }
 .theme {
+    cursor: pointer;
     &__wrapper {
         display: flex;
         justify-content: center;
@@ -56,7 +57,7 @@
         display: flex;
         align-items: center;
         border: 1px solid var(--dark);
-        @include mini-desktop {
+        @include w1200 {
             width: 44px;
             height: 24px;
         }
@@ -68,14 +69,14 @@
         background: var(--dark);
         margin-left: 4px;
         transition: 0.3s;
-        @include mini-desktop {
+        @include w1200 {
             width: 16px;
             height: 16px;
         }
     }
     &__switcher-toggle--active {
         margin-left: 32px;
-        @include mini-desktop {
+        @include w1200 {
             margin-left: 22px;
         }
     }
@@ -86,14 +87,14 @@
 }
 
 .logo svg {
-    @include mini-desktop {
+    @include w1200 {
         width: 140px;
     }
 }
 
 .logo {
     margin-right: 5rem;
-    @include tablet {
+    @include w992 {
         margin-right: 0;
     }
 }
@@ -107,7 +108,7 @@
     flex-direction: row;
     gap: 10px;
     margin-left: 2rem;
-    @include tablet {
+    @include w992 {
         margin-left: 0;
     }
 }
@@ -117,10 +118,20 @@
     display: flex;
     flex-direction: row;
     gap: 50px;
-    margin-right: 20rem;
-    @include tablet {
+    margin-right: 21rem;
+    @include w1100 {
+        margin-right: 17rem;
+    }
+    @include w992 {
         flex-direction: column;
         gap: 30px;
         margin-right: 0;
+    }
+    &__item {
+        transition: transform 0.3s;
+    }
+    &__item:hover {
+        transform: translateY(-5px);
+        // border-bottom: 1px var(--dark) solid;
     }
 }

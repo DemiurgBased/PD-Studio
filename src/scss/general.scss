@@ -28,32 +28,82 @@ a {
     width: 120rem;
     margin: 0 auto;
     padding: 0 1.5rem;
-    @include mini-desktop {
-        width: 100rem;
+    @include w1200 {
+        width: 110rem;
     }
-    @include tablet {
-        width: 80rem;
+    @include w1100 {
+        width: 99.2rem;
     }
-    @include small-tablet {
-        width: 60rem;
+    @include w992 {
+        width: 85rem;
     }
-    @include mobile {
+    @include w850 {
+        width: 76.8rem;
+    }
+    @include w768 {
+        width: 67rem;
+    }
+    @include w670 {
+        width: 57.6rem;
+    }
+    @include w576 {
+        width: 47.5rem;
+    }
+    @include w475 {
         width: 40rem;
+    }
+    @include w380 {
+        width: 35rem;
     }
 }
 
 .regular {
     font-size: 1.6rem;
     font-family: 'Nunito', sans-serif;
-    @include mini-desktop {
+    color: var(--dark);
+    @include w1200 {
+        font-size: 1.4rem;
+    }
+    @include w992 {
         font-size: 1.2rem;
     }
 }
-.heading {
+.subtitle {
+    font-size: 2.2rem;
+    font-family: 'Nunito', sans-serif;
+    color: var(--dark);
+    @include w1200 {
+        font-size: 1.8rem;
+    }
+    @include w992 {
+        font-size: 1.6rem;
+    }
+    @include w670 {
+        font-size: 1.4rem;
+    }
+}
+.title {
     font-size: 4.8rem;
     font-family: 'Comfortaa', sans-serif;
-    @include mini-desktop {
-        font-size: 3.6rem;
+    color: var(--dark);
+    margin-top: 50px;
+    @include w1200 {
+        font-size: 4.2rem;
+    }
+    @include w992 {
+        font-size: 3.8rem;
+    }
+    @include w670 {
+        font-size: 3.4rem;
+    }
+    @include w576 {
+        font-size: 3.2rem;
+    }
+    @include w475 {
+        font-size: 2.8rem;
+    }
+    @include w380 {
+        font-size: 2.6rem;
     }
 }
 .shadow {

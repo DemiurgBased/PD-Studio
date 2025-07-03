@@ -1,34 +1,49 @@
-@mixin small-desktop {
+@mixin w1440 {
     @media (max-width: 1440px) {
         @content;
     }
 }
-
-@mixin mini-desktop {
+@mixin w1200 {
     @media (max-width: 1200px) {
         @content;
     }
 }
-
-@mixin tablet {
+@mixin w1100 {
+    @media (max-width: 1100px) {
+        @content;
+    }
+}
+@mixin w992 {
     @media (max-width: 992px) {
         @content;
     }
 }
-
-@mixin small-tablet {
+@mixin w850 {
+    @media (max-width: 850px) {
+        @content;
+    }
+}
+@mixin w768 {
     @media (max-width: 768px) {
         @content;
     }
 }
-
-@mixin mobile {
+@mixin w670 {
+    @media (max-width: 670px) {
+        @content;
+    }
+}
+@mixin w576 {
     @media (max-width: 576px) {
         @content;
     }
 }
-
-@mixin small-mobile {
+@mixin w475 {
+    @media (max-width: 475px) {
+        @content;
+    }
+}
+@mixin w380 {
     @media (max-width: 380px) {
         @content;
     }
