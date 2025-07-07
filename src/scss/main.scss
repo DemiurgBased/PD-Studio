@@ -1,6 +1,7 @@
 @import './mixins/index';
 @import './base/index';
-@import '../scss/general.scss';
-@import '../scss/burger.scss';
-@import '../scss/sections/header.scss';
-@import '../scss/sections/hero.scss';
+@import './general.scss';
+@import './sections/header.scss';
+@import './sections/hero.scss';
+@import './theme.scss';
+@import './burger.scss';

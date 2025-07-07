@@ -1,9 +1,8 @@
-const burgerBTN = document.querySelector('.burger-btn');
+const burger = document.querySelector('.burger');
 const headerInner = document.querySelector('.header__inner');
 const body = document.body;
 
-burgerBTN.addEventListener('click', () => {
-    burgerBTN.classList.toggle('burger-btn-active');
-    headerInner.classList.toggle('header__inner-active');
-    body.classList.toggle('no-scroll');
-})
+burger.addEventListener('click', () => {
+    headerInner.classList.toggle('header__inner--active')
+    burger.classList.toggle('burger--active')
+});

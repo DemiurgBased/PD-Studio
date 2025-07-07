@@ -1,111 +1,83 @@
+a {
+    all: unset !important; /* сбросить все стили */
+    cursor: pointer !important; /* вернуть курсор-указатель */
+}
+
 html * {
-        transition: 0.3s;
-        color: var(--dark);
+    transition: 0.3s;
 }
 
 html {
-    font-size: 10px;
+    font-size: 16px;
+    @include w1200 {
+        font-size: 14px;
+    }
+    @include w1100 {
+        font-size: 13px;
+    }
+    @include w992 {
+        font-size: 12px;
+    }
+    @include w576 {
+        font-size: 10px;
+    }
+    @include w380 {
+        font-size: 8px;
+    }
 }
 
-a {
-    all: unset; /* сбросить все стили */
-    cursor: pointer; /* вернуть курсор-указатель */
-    color: inherit; /* наследовать цвет текста */
-}
-
-.section {
-    &-odd {
-        height: 68rem;
-        background: var(--white);
-    }
-    &-even {
-        height: 68rem;
-        background: var(--light);
-    }
+.shadow {
+    box-shadow: 1px 4px 4px 0 rgba(0, 0, 0, 0.25), -1px 0 4px 0 rgba(0, 0, 0, 0.25);
 }
 
 .container {
-    width: 120rem;
+    width: 100%;
+    max-width: 1200px;
     margin: 0 auto;
-    padding: 0 1.5rem;
+    padding: 0 15px;
+    box-sizing: border-box;
     @include w1200 {
-        width: 110rem;
+        width: 1100px;
     }
     @include w1100 {
-        width: 99.2rem;
+        width: 992px;
     }
     @include w992 {
-        width: 85rem;
+        width: 850px;
     }
     @include w850 {
-        width: 76.8rem;
+        width: 768px;
     }
     @include w768 {
-        width: 67rem;
+        width: 670px;
     }
     @include w670 {
-        width: 57.6rem;
+        width: 576px;
     }
     @include w576 {
-        width: 47.5rem;
+        width: 475px;
     }
     @include w475 {
-        width: 40rem;
+        width: 380px;
     }
     @include w380 {
-        width: 35rem;
+        width: 350px;
     }
 }
 
 .regular {
-    font-size: 1.6rem;
+    font-size: 1rem;
     font-family: 'Nunito', sans-serif;
-    color: var(--dark);
-    @include w1200 {
-        font-size: 1.4rem;
-    }
-    @include w992 {
-        font-size: 1.2rem;
-    }
-}
-.subtitle {
-    font-size: 2.2rem;
-    font-family: 'Nunito', sans-serif;
-    color: var(--dark);
-    @include w1200 {
-        font-size: 1.8rem;
-    }
-    @include w992 {
-        font-size: 1.6rem;
-    }
-    @include w670 {
-        font-size: 1.4rem;
-    }
 }
 .title {
-    font-size: 4.8rem;
+    font-size: 3rem;
     font-family: 'Comfortaa', sans-serif;
-    color: var(--dark);
-    margin-top: 50px;
-    @include w1200 {
-        font-size: 4.2rem;
-    }
-    @include w992 {
-        font-size: 3.8rem;
-    }
-    @include w670 {
-        font-size: 3.4rem;
-    }
-    @include w576 {
-        font-size: 3.2rem;
-    }
-    @include w475 {
-        font-size: 2.8rem;
-    }
-    @include w380 {
-        font-size: 2.6rem;
-    }
 }
-.shadow {
-    box-shadow: 1px 4px 4px 0 rgba(0, 0, 0, 0.25), -1px 0 4px 0 rgba(0, 0, 0, 0.25);
+.subtitle {
+    font-size: 1.5rem;
+    font-family: 'Nunito', sans-serif;
+}
+
+.logo svg path {
+    fill: var(--light-logo) !important;
 }

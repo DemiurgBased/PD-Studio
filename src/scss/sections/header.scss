@@ -1,139 +1,96 @@
 .header {
     background: var(--white);
+    color: var(--dark);
     font-family: 'Comfortaa';
-    font-size: 1.6rem;
-    height: 10vh;
-    position: relative;
+    padding-top: 10px;
+    padding-bottom: 10px;
     @include w1200 {
-        font-size: 1.2rem;
+        font-size: 14px;
     }
     &__wrapper {
         display: flex;
         align-items: center;
+        width: 100%;
+        gap: 3%;
+        @include w992 {
+            justify-content: space-between;
+        }
     }
     &__inner {
         display: flex;
         align-items: center;
-        z-index: 10;
-        transition: 0.5s;
+        justify-content: space-between;
         width: 100%;
-        &-active {
-            transform: translateY(0) !important;
-            opacity: 1 !important;
-        }
         @include w992 {
-            opacity: 0;
-            transform: translateY(-100%);
-            width: 100vw;
-            height: 100vh;
-            position: absolute;
+            transform: translateY(-100%) !important;
+            position: fixed;
             top: 0;
             left: 0;
             bottom: 0;
             right: 0;
-            flex-direction: column;
-            background-color: var(--light);
-            color: var(--dark);
+            width: 100%;
+            height: 100%;
+            transition: 0.5s;
+            display: flex;
+            align-items: center;
             justify-content: center;
-            gap: 30px;
-            font-size: 1.6rem;
+            opacity: 0 !important;
+            flex-direction: column;
+            background: var(--light);
+            font-size: 22px;
+            gap: 50px;
+            
+        }
+        @include w475 {
+            font-size: 18px;
+        }
+        &--right {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            @include w1100 {
+                width: 50%;
+                justify-content: space-between;
+            }
+            @include w992 {
+                flex-direction: column;
+                gap: 50px;
+            }
+        }
+    }
+    &__inner--active {
+        @include w992 {
+        transform: translateY(0%) !important;
+        opacity: 1 !important;
         }
     }
 }
-.theme {
-    cursor: pointer;
-    &__wrapper {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        gap: 15px;
-    }
-    &__text {
-        color: var(--black);
-    }
-    &__switcher-toggle-bg {
-        height: 30px;
-        width: 60px;
-        border-radius: 45px;
-        background: var(--light);
-        display: flex;
-        align-items: center;
-        border: 1px solid var(--dark);
-        @include w1200 {
-            width: 44px;
-            height: 24px;
-        }
-    }
-    &__switcher-toggle {
-        height: 22px;
-        width: 22px;
-        border-radius: 50%;
-        background: var(--dark);
-        margin-left: 4px;
-        transition: 0.3s;
-        @include w1200 {
-            width: 16px;
-            height: 16px;
-        }
-    }
-    &__switcher-toggle--active {
-        margin-left: 32px;
-        @include w1200 {
-            margin-left: 22px;
-        }
-    }
-}
-
-.logo svg path {
-    fill: var(--blue-logo);
-}
-
-.logo svg {
-    @include w1200 {
-        width: 140px;
-    }
-}
-
-.logo {
-    margin-right: 5rem;
-    @include w992 {
-        margin-right: 0;
-    }
-}
-
-.logo-index {
-    z-index: 100;
-}
-
-.socials {
-    display: flex;
-    flex-direction: row;
-    gap: 10px;
-    margin-left: 2rem;
-    @include w992 {
-        margin-left: 0;
-    }
-}
-
 
 .nav {
     display: flex;
-    flex-direction: row;
-    gap: 50px;
-    margin-right: 21rem;
+    align-items: center;
+    width: 39%;
+    gap: 14%;
+    @include w1200 {
+        width: 38%;
+    }
     @include w1100 {
-        margin-right: 17rem;
+        width: 50%;
     }
     @include w992 {
         flex-direction: column;
-        gap: 30px;
-        margin-right: 0;
+        gap: 50px;
     }
-    &__item {
-        transition: transform 0.3s;
+    @include w768 {
+        width: 100%;
     }
-    &__item:hover {
-        transform: translateY(-5px);
-        // border-bottom: 1px var(--dark) solid;
-    }
+}
+.socials {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo {
+    z-index: 5;
 }

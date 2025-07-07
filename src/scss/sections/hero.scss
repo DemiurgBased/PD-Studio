@@ -1,83 +1,87 @@
 .hero {
-    height: 58rem;
-    display: flex;
-    align-items: end;
     background: var(--white);
-    @include w1200 {
-        height: 55rem;
-    }
-    @include w992 {
-        height: 50rem;
-    }
-    @include w768 {
-        height: 80rem;
-    }
-    @include w576 {
-        height: 70rem;
-    }
-    @include w475 {
-        height: 65rem;
-    }
-    @include w380 {
-        height: 60rem;
-    }
     &__wrapper {
+        height: 580px;
         display: flex;
-        align-items: center;
         justify-content: center;
-        margin-bottom: -2px;
+        align-items: end;
+        color: var(--dark);
+        @include w1100 {
+            height: 540px;
+        }
+        @include w992 {
+            height: 480px;
+        }
+        @include w850 {
+            height: 750px;
+        }
         @include w768 {
+            height: 780px;
+        }
+        @include w670 {
+            height: 800px;
+        }
+        @include w576 {
+            height: 650px;
+        }
+        @include w475 {
+            height: 620px;
+        }
+        @include w380 {
+            height: 520px;
+        }
+    }
+    &__inner {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        overflow: hidden;
+        @include w992 {
+            gap: 5px;
+        }
+        @include w850 {
             flex-direction: column;
+            gap: 25px;
         }
     }
     &__text {
+        width: 46%;
         display: flex;
+        align-items: center;
         flex-direction: column;
-        width: 53.3rem;
-        gap: 15px;
-        @include w768 {
+        gap: 10px;
+        @include w992 {
+            width: 50%;
+            gap: 15px;
+        }
+        @include w850 {
+            width: 90%;
             text-align: center;
-            margin-top: 5rem;
-            width: 50rem;
-        }
-        @include w576 {
-            width: 40rem;
+            gap: 25px;
         }
         @include w475 {
-            width: 33rem;
-        }
-        @include w380 {
-            width: 30rem;
-        }
-    }
-    &__title {
-        margin-top: unset;
-        @include w768 {
-            margin-bottom: 3rem;
-        }
-        @include w475 {
-            margin-bottom: 2rem;
+            width: 100%;
         }
     }
     &__descr {
-        @include w768 {
-            margin-bottom: 3rem;
+        font-family: 'Nunito', sans-serif;
+        font-size: 1.3rem;
+        // @include w1100 {
+        //     font-size: 1.2rem;
+        // }
+    }
+    &__img {
+        margin-bottom: -4px;
+        width: 39%;
+        @include w850 {
+            width: 60%;
+        }
+        @include w670 {
+            width: 70%;
         }
         @include w475 {
-            margin-bottom: 2rem;
-            font-size: 1.3rem;
-        }
-    }
-    &__img img {
-        width: 40rem;
-        @include w1200 {
-            width: 35rem;
-        }
-        @include w576 {
-            width: 30rem;
-        }
-        @include w380 {
-            width: 26rem;
+            width: 80%;
         }
     }
 }

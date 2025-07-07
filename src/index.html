@@ -1,19 +1,19 @@
 <!doctype html>
-<html lang="ru" id="htmltag">
+<html lang="ru">
 
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="./scss/main.scss">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>PD Studio</title>
+  <link rel="stylesheet" href="./scss/main.scss">
 </head>
 
-<body class="body">
-  <!-- header start -->
+<body>
+  <!-- -------------------------------------------------HEADER--------------------------------------------------------------------------- -->
   <header class="header">
     <div class="container">
       <div class="header__wrapper">
-        <div class="logo logo-index">
+        <div class="logo">
           <svg width="200" height="63" viewBox="0 0 200 63" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path
               d="M49.3185 7.37039H15.0593C11.007 7.37039 7.71808 10.6745 7.71808 14.7457V49.1639C7.71808 53.2351 11.007 56.5392 15.0593 56.5392H49.3185C53.3708 56.5392 56.6597 53.2351 56.6597 49.1639V14.7457C56.6597 10.6696 53.3708 7.37039 49.3185 7.37039ZM29.9474 30.937C29.4971 32.2105 28.8804 33.2184 28.0974 33.9609C27.3143 34.7033 26.4383 35.2196 25.4643 35.5146C24.4904 35.8096 23.4822 35.9571 22.4397 35.9571H21.7448V47.3348C21.7448 47.6298 21.6811 47.8314 21.549 47.9347C21.4168 48.0379 21.0498 48.1068 20.438 48.1363C19.8311 48.1658 18.7838 48.1805 17.3057 48.1805V17.9122C17.3057 17.6172 17.3547 17.4008 17.4575 17.2681C17.5602 17.1353 17.7854 17.0665 18.1329 17.0665H18.4803H20.9176H22.3125C24.138 17.0665 25.6699 17.3418 26.9032 17.8876C28.1365 18.4383 29.0664 19.3627 29.688 20.6656C30.3095 21.9686 30.6228 23.778 30.6228 26.089C30.6228 28.0459 30.3976 29.6635 29.9474 30.937ZM48.0509 38.9171C47.7181 41.0953 47.2091 42.8654 46.5288 44.2273C45.8485 45.5893 44.9822 46.5924 43.9398 47.2266C42.8973 47.8658 41.6493 48.1805 40.1958 48.1805H34.6702V17.9564C34.6702 17.6614 34.7485 17.4402 34.9101 17.2877C35.0667 17.1402 35.3799 17.0665 35.8448 17.0665H40.0636C41.4829 17.0665 42.7309 17.273 43.8076 17.6909C44.8795 18.1039 45.7653 18.8267 46.4603 19.8445C47.1553 20.8623 47.6789 22.2882 48.0264 24.1124C48.3739 25.9365 48.5501 28.2524 48.5501 31.0698C48.5501 34.1231 48.3837 36.7389 48.0509 38.9171Z"
@@ -62,78 +62,62 @@
               fill="#362AF0" />
           </svg>
         </div>
+        <div class="burger">
+          <div class="burger__line"></div>
+          <div class="burger__line"></div>
+          <div class="burger__line"></div>
+        </div>
         <div class="header__inner">
           <div class="nav">
             <a href="#" class="nav__item">Как мы работаем</a>
             <a href="#" class="nav__item">Статьи и кейсы</a>
           </div>
-          <div class="theme">
-            <div class="theme__wrapper">
-              <p class="theme__text">Темная тема</p>
-              <div class="theme__switcher-toggle-bg">
-                <div class="theme__switcher-toggle"></div>
+          <div class="header__inner--right">
+            <div class="theme">
+              <div class="theme__wrapper">
+                <div class="theme__text">Темная тема</div>
+                <div class="theme__toggle">
+                  <div class="theme__toggle-circle"></div>
+                </div>
               </div>
             </div>
-          </div>
-          <div class="socials">
-            <a href="#" class="vk-link">
-              <img src="./assets/icons/vk-icon.png" alt="vk">
-            </a>
-            <a href="#" class="tg-link">
-              <img src="./assets/icons/tg-icon.png" alt="tg">
-            </a>
-            <a href="#" class="mail-link">
-              <img src="./assets/icons/mail-icon.png" alt="mail">
-            </a>
+            <div class="socials">
+              <a href="#" class="socials__item">
+                <img src="./assets/icons/mail-icon.png" alt="mail">
+              </a>
+              <a href="#" class="socials__item">
+                <img src="./assets/icons/tg-icon.png" alt="tg">
+              </a>
+              <a href="#" class="socials__item">
+                <img src="./assets/icons/vk-icon.png" alt="vk">
+              </a>
+            </div>
           </div>
         </div>
       </div>
     </div>
-    <button class="burger-btn">
-      <div class="burger-line"></div>
-      <div class="burger-line"></div>
-      <div class="burger-line"></div>
-    </button>
   </header>
-  <!-- header end -->
+  <!-- -------------------------------------------------HERO--------------------------------------------------------------------------- -->
   <section class="hero">
     <div class="container">
       <div class="hero__wrapper">
-        <div class="hero__text">
-          <p class="hero__title title">
-            Клиенты ищут вас на картах - <br>
-            мы поможем найти!</p>
-          <p class="hero__descr subtitle">
-            Карты приводят десятки клиентов в неделю, если профили настроены правильно. <br>
-            Оформим карточку вашего бизнеса так, чтобы вас замечали в выдаче и выбирали среди конкурентов. <br>
-            Без накруток, серых схем и риска блокировок.</p>
-        </div>
-        <div class="hero__img">
-          <img src="./assets/images/hero-img.png" alt="">
+        <div class="hero__inner">
+          <div class="hero__text">
+            <p class="hero__title title">Клиенты ищут вас на картах - <br>мы поможем найти!</p>
+            <p class="hero__descr">Карты приводят десятки клиентов в неделю, если профили настроены
+              правильно. <br>Оформим карточку вашего бизнеса так, чтобы вас замечали в выдаче и выбирали среди
+              конкурентов. <br>Без
+              накруток, серых схем и риска блокировок.</p>
+          </div>
+          <div class="hero__img">
+            <img src="./assets/images/hero-img.png" alt="hero-img">
+          </div>
         </div>
       </div>
     </div>
   </section>
-  <section class="hero">
-    <div class="container">
-      <div class="hero__wrapper">
-        <div class="hero__text">
-          <p class="hero__title title">
-            Клиенты ищут вас на картах - <br>
-            мы поможем найти!</p>
-          <p class="hero__descr subtitle">
-            Карты приводят десятки клиентов в неделю, если профили настроены правильно. <br>
-            Оформим карточку вашего бизнеса так, чтобы вас замечали в выдаче и выбирали среди конкурентов. <br>
-            Без накруток, серых схем и риска блокировок.</p>
-        </div>
-        <div class="hero__img">
-          <img src="./assets/images/hero-img.png" alt="">
-        </div>
-      </div>
-    </div>
-  </section>
-  <script src="./js/theme.js"></script>
   <script src="./js/burger.js"></script>
+  <script src="./js/theme.js"></script>
 </body>
 
 </html>

@@ -1,8 +1,5 @@
 html {
     box-sizing: border-box;
-    font-family: Josefin Sans;
-    font-weight: 500;
-    font-size: 18px;
     scroll-behavior: smooth !important;
 }
 
@@ -12,11 +9,6 @@ html {
     box-sizing: inherit;
 }
 
-.body {
-    position: relative;
-    overflow-x: hidden;
-    z-index: -2;
-}
 
 img {
     height: auto;

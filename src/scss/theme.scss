@@ -1,0 +1,32 @@
+.theme {
+    cursor: pointer;
+    &__wrapper {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        @include w475 {
+        width: 250px;
+        justify-content: center;
+        }
+    }
+    &__toggle {
+        width: 60px;
+        height: 30px;
+        border-radius: 30px;
+        background: var(--light);
+        border: 1px var(--dark) solid;
+        display: flex;
+        align-items: center;
+
+    }
+    &__toggle-circle {
+        width: 22px;
+        height: 22px;
+        border-radius: 30px;
+        background: var(--dark);
+        margin-left: 4px;
+    }
+    &__toggle-circle--active {
+        margin-left: 32px;
+    }
+}
