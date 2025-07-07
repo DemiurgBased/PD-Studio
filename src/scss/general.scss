@@ -81,3 +81,7 @@ html {
 .logo svg path {
     fill: var(--light-logo) !important;
 }
+
+.no-scroll {
+    overflow: hidden;
+}

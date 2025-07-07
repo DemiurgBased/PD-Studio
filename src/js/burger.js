@@ -5,4 +5,5 @@ const body = document.body;
 burger.addEventListener('click', () => {
     headerInner.classList.toggle('header__inner--active')
     burger.classList.toggle('burger--active')
+    body.classList.toggle('no-scroll')
 });
