@@ -1,0 +1,11 @@
+.value {
+    height: 680px;
+    background: var(--light);
+    padding-top: 50px;
+    padding-bottom: 50px;
+    &__wrapper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}

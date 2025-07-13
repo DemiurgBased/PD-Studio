@@ -22,13 +22,13 @@
             height: 800px;
         }
         @include w576 {
-            height: 650px;
+            height: 700px;
         }
         @include w475 {
-            height: 620px;
+            height: 700px;
         }
         @include w380 {
-            height: 520px;
+            height: 700px;
         }
     }
     &__inner {
@@ -76,6 +76,7 @@
         width: 39%;
         @include w850 {
             width: 60%;
+            margin-left: 30px;
         }
         @include w670 {
             width: 70%;
