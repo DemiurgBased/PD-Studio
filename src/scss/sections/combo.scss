@@ -1,0 +1,121 @@
+.combo {
+    background: var(--light);
+    color: var(--dark);
+    &__wrapper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        width: 100%;
+        height: 680px;
+        @include w1100 {
+            height: 610px;
+        }
+        @include w992 {
+            height: 550px;
+        }
+        @include w850 {
+            height: 900px;
+        }
+    }
+    &__title {
+        margin-top: 50px;
+        @include w850 {
+            margin-bottom: 50px;
+        }
+    }
+    &__cards {
+        height: 100%;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        @include w850 {
+            flex-direction: column;
+            gap: 25px;
+            margin-bottom: 50px;
+        }
+    }
+}
+.combo-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    width: 47%;
+    height: 60%;
+    border-radius: 25px;
+    padding: 50px;
+    background: var(--white);
+    @include w1100 {
+        border-radius: 15px;
+        padding: 30px;
+    }
+    @include w850 {
+        height: 45%;
+        width: 65%;
+    }
+    @include w670 {
+        width: 80%;
+    }
+    @include w576 {
+        width: 90%;
+    }
+    @include w475 {
+        width: 100%;
+        padding: 18px;
+        border-radius: 9px;
+    }
+    &__title {
+        font-family: 'Comfortaa', sans-serif !important;
+        font-size: 1.5rem;
+        @include w992 {
+            font-size: 1.4rem;
+        }
+        @include w850 {
+            font-size: 1.5rem;
+        }
+        @include w475  {
+            text-align: center;
+        }
+    }
+    &__price {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        border-radius: 10px;
+        padding: 10px;
+        width: 100%;
+        height: 35%;
+        background: var(--blue);
+        font-family: 'NunitoBold', sans-serif !important; 
+        font-size: 2rem;
+        color: #ededed;
+        @include w380 {
+            height: 25%;
+        }
+    }
+    &__descr {
+        text-align: center;
+        
+    }
+    &__economy {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        border-radius: 10px;
+        padding: 10px;
+        width: 100%;
+        height: 20%;
+        background: var(--red);
+        font-family: 'NunitoBold', sans-serif !important; 
+        font-size: 1.5rem;
+        color: #ededed;
+        @include w380 {
+            height: 25%;
+            text-align: center;
+        }
+    }
+}
