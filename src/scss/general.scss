@@ -8,7 +8,18 @@ html * {
 }
 
 html {
-    font-size: 16px;
+    @include w3840 {
+        font-size: 22px;
+    }
+    @include w2560 {
+        font-size: 20px;
+    }
+    @include w1920 {
+        font-size: 18px;
+    }
+    @include w1440 {
+        font-size: 16px;
+    }
     @include w1200 {
         font-size: 14px;
     }
@@ -32,10 +43,26 @@ html {
 
 .container {
     width: 100%;
-    max-width: 1200px;
     margin: 0 auto;
     padding: 0 15px;
+    max-width: 1200px;
     box-sizing: border-box;
+    @include w3840 {
+        width: 1800px;
+        max-width: 1800px;
+    }
+    @include w2560 {
+        width: 1600px;
+        max-width: 1600px;
+    }
+    @include w1920 {
+        width: 1400px;
+        max-width: 1400px;
+    }
+    @include w1440 {
+        width: 1200px;
+    }
+    
     @include w1200 {
         width: 1100px;
     }

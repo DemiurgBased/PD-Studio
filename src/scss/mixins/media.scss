@@ -1,3 +1,19 @@
+
+@mixin w3840 {
+    @media (max-width: 3840px) {
+        @content;
+    }
+}
+@mixin w2560 {
+    @media (max-width: 2560px) {
+        @content;
+    }
+}
+@mixin w1920 {
+    @media (max-width: 1920px) {
+        @content;
+    }
+}
 @mixin w1440 {
     @media (max-width: 1440px) {
         @content;

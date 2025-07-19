@@ -6,6 +6,15 @@
         justify-content: center;
         align-items: end;
         color: var(--dark);
+        @include w3840 {
+            height: 740px;
+        }
+        @include w2560 {
+            height: 680px;
+        }
+        @include w1920 {
+            height: 640px;
+        }
         @include w1100 {
             height: 540px;
         }
@@ -46,11 +55,26 @@
         }
     }
     &__text {
-        width: 46%;
         display: flex;
         align-items: center;
         flex-direction: column;
-        gap: 10px;
+        justify-content: end;
+        @include w3840 {
+            width: 50%;
+            gap: 20px;
+        }
+        @include w2560 {
+            width: 45%;
+            gap: 20px;
+        }
+        @include w1920 {
+            width: 45%;
+            gap: 15px;
+        }
+        @include w1440 {
+            width: 46%;
+            gap: 10px;
+        }
         @include w992 {
             width: 50%;
             gap: 15px;
@@ -73,7 +97,20 @@
     }
     &__img {
         margin-bottom: -4px;
-        width: 39%;
+        display: flex;
+        justify-content: center;
+        @include w3840 {
+            width: 30%;
+        }
+        @include w2560 {
+            width: 33%;
+        }
+        @include w1920 {
+            width: 36%;
+        }
+        @include w1440 {
+            width: 39%;
+        }
         @include w850 {
             width: 60%;
             margin-left: 30px;
@@ -83,6 +120,20 @@
         }
         @include w475 {
             width: 80%;
+        }
+    }
+    &__img img {
+        @include w3840 {
+            width: 550px;
+        }
+        @include w2560 {
+            width: 500px;
+        }
+        @include w1920 {
+            width: 450px;
+        }
+        @include w1440 {
+            width: 400px;
         }
     }
 }
